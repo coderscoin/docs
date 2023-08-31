@@ -10,17 +10,17 @@ There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-# Header 1
+# Getting started
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+Welcome to CodersCoin official documentation. This website provides instructions for contributing to CodersCoin, as well as for running and configuring the node and mining software.
 
-## Header 2
+## Governance and mining
 
 > This is a blockquote following a header.
 >
 > When something is important enough, you do it even if the odds are not in your favor.
 
-### Header 3
+### Mine CodersCoin
 
 ```js
 // Javascript code with syntax highlighting.
@@ -37,17 +37,34 @@ GitHubPages::Dependencies.gems.each do |gem, version|
 end
 ```
 
-#### Header 4
+### Run a node
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+## Developers
 
-##### Header 5
+> This is the collection of documentation for development and contribution purposes.
+> The links below are for experienced users and developers only.
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+### Wallet
+
+*   [Developer documentation](./wallet.html)
+
+### Node
+
+*   **SOON**
+
+## Version support
+
+### Mainnet
+
+| version      | node    | wallet  | miner   |
+|:-------------|:--------|:--------|:--------|
+| v2.0.0       | &check; | &cross; | &cross; |
+
+### Testnet
+
+| version      | node    | wallet  | miner   |
+|:-------------|:--------|:--------|:--------|
+| v2.0.0       | &check; | &check; | &check; |
 
 ###### Header 6
 
@@ -58,7 +75,7 @@ end
 | ok           | good `oreos`      | hmm   |
 | ok           | good `zoute` drop | yumm  |
 
-### There's a horizontal rule below this.
+#### Ignore these below, they're for reference when building this page
 
 * * *
 
