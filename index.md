@@ -14,28 +14,56 @@ There should be whitespace between paragraphs. We recommend including a README, 
 
 Welcome to CodersCoin official documentation. This website provides instructions for contributing to CodersCoin, as well as for running and configuring the node and mining software.
 
-## Governance and mining
+## Node
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+This is a guide on how to get a CodersCoin node up and running.
 
-### Mine CodersCoin
+### 1. Installation
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
+Navigate to the CodersCoin node Github repository and find the latest release on [this page](https://github.com/coderscoin/node/releases)! At the time of writing this documentation, the latest version is [2.0.0-beta](https://github.com/coderscoin/node/releases/tag/v2.0.0-beta).
+
+Select the right verison for your system, download and unzip it! If you deploy from source code, run `npm install` in the project directory after unzipping the files! 
+
+### 2. Setting up the node
+
+In order for the CodersCoin node to function properly and for you to get the node reward, the node's data must be configured and added to the node explorer so that other nodes can discover it in the peer-to-peer network!
+
+First, let's modify the `config.json` file! You need to replace the value of `runnerUser` with your Github username that you use as your CodersCoin wallet address. In my case, my username is petertill.
+
+```json
+{
+    "nodeVersion": "v1.0.0",
+    "nodeExplorer":"",
+    "runnerUser": "petertill",
+    "serverPort":"3000",
+    "blockchainFile":"blockchain1.json",
+    "transactionPoolFile":"transactions.json"
 }
 ```
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
+First, let's modify the `config.json` file! You need to replace the value of `runnerUser` with your Github username that you use as your CodersCoin wallet address. In my case, my username is petertill.
+
+The next step is to add our node to the Node Explorer! The node explorer is nothing more than a json file stored in a [Github repository](https://github.com/coderscoin/nodexplorer) with the IP address, port, and username of all existing peers. 
+
+In order to add your node, you must make the IP address and port where the CodersCoin node is running publicly available via port forwarding. If you can't handle port forwarding securely, it's safer to use ngrok.
+
+If you have this, fork the node explorer repo and add the data of your node in the last line of the json file, then make a pull request!
+
+```json
+{"host": "191.0.1.255", "port": 3000, "user":"petertill"}
 ```
+
+### 3. Using ngrok
+
+> Your ngrok tcp url might change every time you start it, I have to figure something out for that.
+
+
+
+### 4. Running it
+
+If your pull request has been accepted, you are now part of CodersCoin's decentralized, peer-to-peer network! To run node, run the node index.js command from the project folder, or if you use an executable file, simply run it!
+
+
 
 ### Run a node
 
@@ -66,75 +94,5 @@ end
 |:-------------|:--------|:--------|:--------|
 | v2.0.0       | &check; | &check; | &check; |
 
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-#### Ignore these below, they're for reference when building this page
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
 
 
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
