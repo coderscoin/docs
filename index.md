@@ -95,4 +95,17 @@ If your pull request has been accepted, you are now part of CodersCoin's decentr
 | v2.0.0       | &check; | &check; | &check; |
 
 
+## NFTs
 
+NFT metadata should be located in the ```data``` object. CodersCoin uses the transaction object for selling and transferring NFTs.
+
+```json
+"NFT":{
+    "id": "140bc69a2d8e8d23d5264d3c33f7cffa583f2a4e2d64", 
+    "metadata":{
+        "title":"Dog NFT", 
+        "description":"This is really cute", 
+        "url":"https://mysite.com/assets/picture.jpg"
+    }
+}
+```
