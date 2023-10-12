@@ -25,12 +25,12 @@ First, let's modify the `config.json` file! You need to replace the value of `ru
 ```json
 {
     "nodeVersion": "v2.5.0",
-    "runnerUser": "csc.6eeddf6f133ac189824ebb702a6b5e", //Your address
-    "serverIP":"localhost", //Your globally accessible ip/hostname
-    "serverPort":"3000", //Your globally accessible port
-    "blockchainFile":"blockchain1.json", //JSON file for blockchain storage
-    "transactionPoolFile":"transactions.json", //JSON file for local transaction pool
-    "seedPeer": {"host": "172.31.255.255", "port": 3001} //Seed node connection details
+    "runnerUser": "csc.6eeddf6f133ac189824ebb702a6b5e", 
+    "serverIP":"localhost", 
+    "serverPort":"3000", 
+    "blockchainFile":"blockchain1.json", 
+    "transactionPoolFile":"transactions.json", 
+    "seedPeer": {"host": "172.31.255.255", "port": 3001}
 }
 ```
 In order to add your node, you must make the IP address and port where the CodersCoin node is running publicly available via port forwarding. If you can't handle port forwarding securely, it's safer to use ngrok.
